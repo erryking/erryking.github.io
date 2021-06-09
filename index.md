@@ -1,3 +1,3 @@
   # My writeups
   
-  <a href="/scriptkiddie.html">Scriptkiddie</a>
+  <a href="/scriptkiddie">Scriptkiddie</a>
